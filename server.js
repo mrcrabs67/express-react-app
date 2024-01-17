@@ -8,6 +8,6 @@ app.listen(port, () => console.log(`Listening on port ${port}`)); //Строка
 // Создание GET маршрута
 app.get('/api', (req, res) => {
     res.json({
-        msg: "Hello"
+        msg: "Hello bitches"
     })
 })
