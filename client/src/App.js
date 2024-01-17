@@ -4,31 +4,24 @@ import './App.css';
 
 function App() {
 
-  const [state, setState] = useState(null);
+const [data, setData] = useState(null);
 
-  const callBackendAPI = async () => {
-    const response = await fetch('/express_backend');
-    const body = await response.json();
 
-    if (response.status !== 200) {
-      throw Error(body.message)
-    }
-    return body;
-  };
-
-  // получение GET маршрута с сервера Express, который соответствует GET из server.js
   useEffect(() => {
-    callBackendAPI()
-        .then(res => setState(res.express))
-        .catch(err => console.log(err));
+    fetch('/api')
+        .then(response => response.json())
+        .then(response => setData(response.msg))
   }, [])
+
 
   return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload!
+            {
+                !data ? "Loading..." : data
+            }
           </p>
           <a
               className="App-link"
@@ -39,11 +32,6 @@ function App() {
             Learn React
           </a>
         </header>
-
-        {/* вывод данных, полученных с сервера Express */}
-        <div>
-          {state}
-        </div>
       </div>
   );
 }
