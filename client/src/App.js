@@ -15,23 +15,37 @@ const [data, setData] = useState(null);
 
 
   return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+      <div className="app-wrapper">
+        <header className="header">
           <p>
             {
                 !data ? "Loading..." : data
             }
           </p>
-          <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+            <img src="https://styleall.ru/wp-content/uploads/2023/02/4eebee67599783.y3jvccwymzyxlde4ndcsntcyldmxnq.jpg" title="logo"></img>
         </header>
+          <nav className="nav">
+              <div>Profile</div>
+              <div>Message</div>
+              <div>News</div>
+              <div>Music</div>
+              <div>Settings</div>
+          </nav>
+          <div className="content">
+              <div>
+                <img src= 'https://greednews.su/wp-content/uploads/2023/09/content-marketing-tools.jpg' title='content'></img>
+              </div>
+              <div>ava + description</div>
+              <div>
+                  My posts
+                  <div>New post</div>
+                  <div>
+                      <div>post1</div>
+                      <div>post2</div>
+                      <div>post3</div>
+                  </div>
+              </div>
+          </div>
       </div>
   );
 }
