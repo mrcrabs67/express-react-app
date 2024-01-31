@@ -1,4 +1,28 @@
 .dialogs {
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+
+
         grid-area: c;
         background-color: cornflowerblue;
     }
+
+.dialitems {
+    padding: 10px;
+}
+
+.dialitems .active{
+    color: white;
+}
+
+.dialog {
+
+}
+
+.messages {
+    padding: 10px;
+}
+
+.message {
+
+}
