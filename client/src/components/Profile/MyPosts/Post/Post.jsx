@@ -9,8 +9,10 @@ const Post = (props) => {
                 <div className={s.posts}>
                     <div className={s.item}>
                         <img src='https://cdn.dribbble.com/users/1634115/screenshots/10876302/dwight-dribbble.jpg'></img>
-                        {props.message}
-                        <div>
+
+                            {props.message}
+
+                        <div className={s.buttons}>
                             <span>like</span>
                             <span>megalike</span>
                         </div>
