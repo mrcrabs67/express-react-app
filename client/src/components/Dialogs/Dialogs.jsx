@@ -1,6 +1,6 @@
 import React from "react";
 import dialogs from './Dialogs.module.css'
-import Navbar from "../Navbar/Navbar";
+// import Navbar from "../Navbar/Navbar";
 import {NavLink} from "react-router-dom";
 
 const DialogItem = (props) => {
@@ -15,21 +15,37 @@ const Message = (props) => {
 }
 
 const Dialogs = (props) => {
+
+    let dialogsData = [
+        {id: 1, name: 'Viktor'},
+        {id: 2, name: 'Yana'},
+        {id: 3, name: 'Vova'},
+        {id: 4, name: 'Roma'},
+    ];
+
+    let messagesData = [
+        {id: 1, message: 'Hi'},
+        {id: 2, message: 'Hello'},
+        {id: 3, message: 'Привет'},
+        {id: 4, message: 'guten tag'},
+    ];
+
     return (
         <div className={dialogs.dialogs}>
             <div className={dialogs.dialitems}>
-                <DialogItem name = "Viktor" id = "1"/>
+                <DialogItem name = {dialogsData[0].name} id = {dialogsData[0].id}/>
 
-                <DialogItem name = "Yana" id = "2"/>
+                <DialogItem name = {dialogsData[1].name} id = {dialogsData[1].id}/>
 
-                <DialogItem name = "Vova" id = "3"/>
+                <DialogItem name = {dialogsData[2].name} id = {dialogsData[2].id}/>
 
-                <DialogItem name = "Roma" id = "4"/>
+                <DialogItem name = {dialogsData[3].name} id = {dialogsData[3].id}/>
             </div>
             <div className={dialogs.messages}>
-                <Message message = "Hi"/>
-                <Message message = "Hello"/>
-                <Message message = "Привет"/>
+                <Message message = {messagesData[0].message}/>
+                <Message message = {messagesData[1].message}/>
+                <Message message = {messagesData[2].message}/>
+                <Message message = {messagesData[3].message}/>
             </div>
         </div>
     )
