@@ -7,8 +7,9 @@
         background-color: cornflowerblue;
     }
 
-.dialitems {
+.dialitems a{
     padding: 10px;
+    color: white;
 }
 
 .dialitems .active{
@@ -21,6 +22,7 @@
 
 .messages {
     padding: 10px;
+    color: white;
 }
 
 .message {
