@@ -20,7 +20,6 @@ const App = (props) => {
 
 
   return (
-      <BrowserRouter>
       <div className="app-wrapper">
           {
               !data ? "Loading..." : data
@@ -40,7 +39,6 @@ const App = (props) => {
 
 
       </div>
-      </BrowserRouter>
   );
 }
 
