@@ -3,8 +3,7 @@
         grid-template-columns: 2fr 10fr;
 
 
-        grid-area: c;
-        background-color: cornflowerblue;
+        /*grid-area: d;*/
     }
 
 .dialitems a{
@@ -16,15 +15,7 @@
     color: white;
 }
 
-.dialog {
-
-}
-
 .messages {
     padding: 10px;
     color: white;
-}
-
-.message {
-
 }
