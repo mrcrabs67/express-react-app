@@ -21,12 +21,12 @@ const App = (props) => {
 
   return (
       <div className="app-wrapper">
-          {
-              !data ? "Loading..." : data
-          }
           <Header />
           <Navbar />
           <div className="app-wrapper-content">
+              {/*{*/}
+              {/*    !data ? "Loading..." : data*/}
+              {/*}*/}
               <Routes>
                   <Route path="/profile"
                          element={<Profile

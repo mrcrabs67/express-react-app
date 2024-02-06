@@ -14,6 +14,7 @@ const MyPosts = (props) => {
         // alert('tic tac huyak')
         // alert(text);
         props.addPost(text);
+        newPostElement.current.value = '';
     };
 
 
